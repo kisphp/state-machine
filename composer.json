@@ -10,6 +10,7 @@
     }
   },
   "require": {
+    "php": ">=7.0",
     "kisphp/tools": "~1.0"
   },
   "require-dev": {
