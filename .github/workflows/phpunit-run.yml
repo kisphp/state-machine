@@ -1,5 +1,10 @@
 name: PHPUNIT
+
 on: [push]
+
+env:
+  XDEBUG_MODE: coverage
+
 jobs:
   Run-Tests:
     runs-on: ubuntu-20.04
@@ -11,4 +16,4 @@ jobs:
           php-version: '7.4'
           extensions: xdebug, ssh2
       - run: composer install -n
-      - run: XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-text
+      - run: vendor/bin/phpunit --coverage-text
