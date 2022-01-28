@@ -15,5 +15,5 @@ jobs:
         with:
           php-version: '7.4'
           extensions: xdebug, ssh2
-      - run: composer install -n
+      - run: composer install -noa
       - run: vendor/bin/phpunit --coverage-text
