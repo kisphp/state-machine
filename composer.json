@@ -4,9 +4,8 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Marius",
-      "email": "mariusbogdan83@gmail.com",
-      "homepage": "http://www.kisphp.com"
+      "name": "Bogdan Rizac",
+      "email": "kisphp@users.noreply.github.com"
     }
   ],
   "minimum-stability": "stable",
@@ -18,7 +17,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "tests\\": "tests/"
+      "Tests\\": "tests/"
     }
   },
   "require": {
@@ -26,8 +25,6 @@
     "kisphp/tools": "~1.0"
   },
   "require-dev": {
-    "phpunit/phpunit": "~6.1",
-    "phpstan/phpstan": "~0.6",
-    "friendsofphp/php-cs-fixer": "~1.9"
+    "phpunit/phpunit": "~9.5"
   }
 }

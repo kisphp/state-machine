@@ -1,10 +1,11 @@
 <?php
 
-namespace tests\StateMachine;
+namespace Tests\StateMachine;
 
+use Kisphp\Sales\IllegalStateTransition;
 use Kisphp\Sales\SalesStateMachine;
 use PHPUnit\Framework\TestCase;
-use tests\Helpers\Order;
+use Tests\Helpers\Order;
 
 class StateMachineTest extends TestCase
 {
@@ -18,12 +19,11 @@ class StateMachineTest extends TestCase
         self::assertEquals(2, $sm->getCurrentState());
     }
 
-    /**
-     * @expectedException \Kisphp\Sales\IllegalStateTransition
-     */
     public function test_illegal_state()
     {
         $sm = $this->createStateMachine();
+
+        $this->expectException(IllegalStateTransition::class);
 
         self::assertSame(1, $sm->getCurrentState());
         $sm->setState(SalesStateMachine::STATE_PROCESS);

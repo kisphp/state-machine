@@ -1,6 +1,6 @@
 <?php
 
-namespace tests\Helpers;
+namespace Tests\Helpers;
 
 use Kisphp\Entity\ToggleableInterface;
 
